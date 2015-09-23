@@ -1,9 +1,0 @@
-package chapter4;
-
-public class Solution09 {
-	public void BSTSequence(BSTreeNode root) {
-		if(root == null) {
-			
-		}
-	}
-}

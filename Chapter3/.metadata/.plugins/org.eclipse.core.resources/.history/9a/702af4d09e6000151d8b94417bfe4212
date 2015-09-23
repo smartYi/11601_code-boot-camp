@@ -1,6 +1,0 @@
-package exceptions;
-
-public class OptionSetNotFound extends AutoException{
-
-	static final long serialVersionUID = 1;
-}

@@ -1,4 +1,0 @@
-INDEX VERSION 1.127+/Users/qiuyi/Desktop/11601/Assignment_week2/Chapter3/.metadata/.plugins/org.eclipse.jdt.core
-3849684412.index
-1872659540.index
-4059697655.index

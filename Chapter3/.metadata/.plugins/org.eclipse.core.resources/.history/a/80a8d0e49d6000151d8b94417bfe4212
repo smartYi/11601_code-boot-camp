@@ -1,6 +1,0 @@
-package exceptions;
-
-public class BlankFile extends AutoException{
-
-	static final long serialVersionUID = 1;
-}
