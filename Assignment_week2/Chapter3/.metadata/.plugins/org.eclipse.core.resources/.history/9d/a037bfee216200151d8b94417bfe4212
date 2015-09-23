@@ -1,0 +1,19 @@
+package chapter4;
+
+public class Solution11 {
+	public class TreeNode {
+		private int data;
+		public TreeNode left;
+		public TreeNode right;
+		private int size = 0;
+		
+		public TreeNode(int d) {
+			data = d;
+			size = 1;
+		}
+		
+		public TreeNode getRandomNode() {
+			if leftSize = left == null ? 0:left.getSize();
+		}
+	}
+}

@@ -1,0 +1,18 @@
+package adapter;
+
+/**
+ * This interface includes two methods that update model information. 
+ * @author qiuyi
+ *
+ */
+public interface UpdateAuto {
+	
+	public void updateOptionSetName(String modelName, 
+			                        String optionSetName,
+			                        String newName);
+	
+	public void updateOptionPrice(String modelName,
+			                      String optionName,
+			                      String option,
+			                      float newPrice);
+}

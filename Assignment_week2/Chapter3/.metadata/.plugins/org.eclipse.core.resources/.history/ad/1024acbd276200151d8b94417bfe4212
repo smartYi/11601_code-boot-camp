@@ -1,0 +1,13 @@
+package chapter4;
+
+public class Solution12 {
+	public int countPathWithSum(BSTreeNode root, int targetSum) {
+		if(root == null) return 0;
+		
+		int pathsFromRoot = countPathWithSumFromNode(root, targetSum,0);
+		
+		int pathsOnLeft = countPathWithSum(root.getLeftChild(), targetSum);
+		int pathsOnRight = countPathWithSum(root.getRightChild(), targetSum);
+		
+	}
+}

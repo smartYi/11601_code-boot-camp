@@ -1,0 +1,89 @@
+package driver;
+
+import java.io.IOException;
+
+import adapter.*;
+import exceptions.*;
+
+/**
+ * This is a test class that drive the model package and util package.
+ * <p>
+ * Several tests are done to test the source code correctness.
+ * First setters and getters function are tested to show good encapsulation of this code;
+ * Then delete functions are tested to show data contents can be deleted arbitrarily 
+ * without changing output format;
+ * Last update functions are tested to show the flexibility of this car configuration model.
+ *
+ * @author--Yi
+ * @version--1.0
+ * @since--Sep/14/2015
+ */
+public class Driver {
+	
+	/**
+	 * This is the main function and do several tests.
+	 * @param args true
+	 */
+	public static void main(String[] args) throws IOException,BlankFile,
+	                                              FileMissingException,InvalidFileType,
+	                                              OptionSetNotFound{
+		
+		//Build AutoMobile Object from a file
+		//Util readfile = new Util();
+		BuildAuto auto = new BuildAuto();
+		
+		//Exception handler
+		String[] str = new String[1];
+		System.out.println(str[0]);
+		System.out.println(str[1].equals(null));
+		
+			auto.buildAuto();
+			auto.printAuto("");
+			System.out.println("---------------------------------------");
+			System.out.println("Test update option set name!");;
+			auto.updateOptionSetName("", "Brakers", "Control Device");
+			auto.printAuto("");
+			System.out.println("---------------------------------------");
+			System.out.println("Test update option price!");;
+			auto.updateOptionPrice("", "Power Moonroof", "present", 790);
+			auto.printAuto("");
+		
+			
+//		System.out.println("--------------------------------------------");
+//		System.out.println("Following some tests are done!");
+//		System.out.println("--------------------------------------------");
+//		System.out.println("Test1: Test getters and setters: ");
+//		System.out.println("Model name: "+ FordZTW.getName());
+//		System.out.println("Reset color size to 0: ");
+//		FordZTW.setOptionsetValue("Color",0);
+//		System.out.println("--------------------------------------------");
+//		System.out.println("Test1 is done, print out information.");
+//		FordZTW.printBasicInfo();
+//		FordZTW.printAdditionalInfo();
+//		System.out.println("Test2: Test delete: ");
+//		System.out.println("Delete opset with index 1: ");
+//		FordZTW.deleteOptionset(1);
+//		System.out.println("Delete opset with index 2 and with its option name: ");
+//		FordZTW.deleteOption(2, "ABS");
+//		System.out.println("--------------------------------------------");
+//		System.out.println("Test2 is done, print out information.");
+//		FordZTW.printBasicInfo();
+//		FordZTW.printAdditionalInfo();
+//		System.out.println("Test3: Test update: ");
+//		System.out.println("1): Update opset with index 2 and update its name and size: ");
+//		FordZTW.updateOptionset(2,"Traction Control", 3);
+//		System.out.println("2): Update opset size while keep its name: ");
+//		FordZTW.updateOptionset("Traction Control", 2);
+//		System.out.println("3): Update option name with its opset index");
+//		FordZTW.updateOptionName(4, "present", "selected");
+//		System.out.println("4): Update option price with its opset index");
+//		FordZTW.updateOptionPrice(3, 1, -150);
+//		System.out.println("--------------------------------------------");
+//		System.out.println("Test3 is done, print out information.");
+//		FordZTW.printBasicInfo();
+//		FordZTW.printAdditionalInfo();
+//		System.out.println("--------------------------------------------");
+//		System.out.println("Tests are done successfully!");
+		
+	}
+}

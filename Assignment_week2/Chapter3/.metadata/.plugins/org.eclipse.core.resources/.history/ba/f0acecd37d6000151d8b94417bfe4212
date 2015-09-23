@@ -1,0 +1,33 @@
+package adapter;
+import model.*;
+import util.*;
+
+public abstract class ProxyAutomobile {
+	private Automotbile myobj;
+	
+	/**
+	 * This method is to build a automobile from filename.
+	 * @param filename
+	 */
+    public void buildAuto(String filename) {
+    	
+    }
+	
+	public void printAuto(String modelName) {
+		
+	}
+	
+	public void updateOptionSetName(String modelName, 
+                                    String optionSetName,
+                                    String newName) {
+		
+	}
+
+    public void updateOptionPrice(String modelName,
+                                  String optionName,
+                                  String option,
+                                  float newPrice) {
+    	
+    }
+	
+}

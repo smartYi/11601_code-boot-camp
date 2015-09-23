@@ -1,0 +1,17 @@
+package chapter4;
+
+import javax.naming.directory.SearchControls;
+
+public class Solution01 {
+	
+	public static boolean isConnected(GraphNode a, GraphNode b) {
+		
+		if(a == null || b == null) return false;
+		return search(a);
+		return false;
+	}
+	
+	public static boolean search() {
+		
+	}
+}

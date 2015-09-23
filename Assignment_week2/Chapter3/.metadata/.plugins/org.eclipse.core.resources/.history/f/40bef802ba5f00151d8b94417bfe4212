@@ -1,0 +1,72 @@
+package chapter3;
+
+/**
+ * This class java file is to generate a simulation animal shelter.
+ * This animal shelter only contains dogs and cats. People can adopt
+ * one animal but the animal is restricted to the oldest animal of all 
+ * animals or in the specific animal type. The age is based on the arrival
+ * time, which means the first come-in animal must first out.
+ * <p>
+ * This character is quite the same as the queue, so an ainimal shelter
+ * queue can be implemented for both dog and cat. And for any animals, 
+ * a total queue is designed.
+ * <p>
+ * This simulation shelter contains four operations:
+ * enequeue(): Add an animal to the end of the total queue and add to the 
+ * specific queue according to their type;
+ * dequeueAny(): Retrieve any animals from the total queue and also delete it
+ * in the specific queue;
+ * dequeueDog(): Retrieve the dog from the dog queue and delete it in the total queue;
+ * dequeueCat(): Retrieve the cat from the cat queue and delete it in the total queue;
+ * 
+ * @author qiuyi
+ *
+ */
+public class Solution06 {
+	
+	public static abstract class Animal {
+		private int order;
+		protected String name;
+		
+		//Constructor
+		public Animal(String name) {
+			this.name = name;
+		}
+		
+		//Setters and getters
+		
+		public int getOrder() {
+			return order;
+		}
+		public void setOrder(int order) {
+			this.order = order;
+		}
+		
+		//To determine if an animal is younger than another one
+		public boolean isYounger(Animal a) {
+			return this.order < a.getOrder();
+		}
+		
+	}
+	
+	//Dog class
+	public static class Dog extends Animal {
+		
+		//Constructor
+		public Dog(String name) {
+			super(name);
+		}
+	}
+	
+	//Cat class
+	public static class Cat extends Animal {
+		
+		//Constructor
+		public Cat() {
+			
+		}
+	}
+	public static class AnimalQueue {
+		
+	}
+}

@@ -1,0 +1,7 @@
+package chapter4;
+
+public class Solution12 {
+	public int countPathWithSum(BSTreeNode root, int targetSum) {
+		if(root == null) return 0;
+	}
+}

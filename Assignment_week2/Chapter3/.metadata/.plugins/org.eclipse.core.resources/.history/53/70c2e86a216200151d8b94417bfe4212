@@ -1,0 +1,10 @@
+package chapter4;
+
+public class Solution11 {
+	public class TreeNode {
+		private int data;
+		public TreeNode left;
+		public TreeNode right;
+		private int size = 0;
+	}
+}

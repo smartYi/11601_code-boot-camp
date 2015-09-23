@@ -1,0 +1,6 @@
+package chapter4;
+
+public class GraphNode {
+	private int dat;
+	private GraphNode[] children;
+}

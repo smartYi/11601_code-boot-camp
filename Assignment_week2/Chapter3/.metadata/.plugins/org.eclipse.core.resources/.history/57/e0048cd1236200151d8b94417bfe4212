@@ -1,0 +1,34 @@
+package chapter4;
+
+import java.util.Random;
+
+public class Solution11 {
+	public class TreeNode {
+		private int data;
+		public TreeNode left;
+		public TreeNode right;
+		private int size = 0;
+		
+		public TreeNode(int d) {
+			data = d;
+			size = 1;
+		}
+		
+		public TreeNode getRandomNode() {
+			int leftSize = left == null ? 0:left.getSize();
+			Random random = new Random();
+			int index = random.nextInt(leftSize);
+			if(index<leftSize) {
+				return left.getRandomNode();
+			}else if(index == leftSize) {
+				return this;
+			}else {
+				return right.getRandomNode();
+			}
+		}
+		
+		public void insertInOrder() {
+			
+		}
+	}
+}

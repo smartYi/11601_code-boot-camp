@@ -1,0 +1,30 @@
+package exceptions;
+
+import java.util.Scanner;
+import java.io.BufferedReader;
+
+public class Fix1to100 {
+	
+	public String fix1() {
+		System.out.println("Please input your new file name: ");
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String fileName = in.nextLine();
+		return fileName;
+	}
+	
+    public String fix2() {
+		return "";
+	}
+    
+    public String fix3() {
+    	return "";
+    }
+    
+    public String fix4() {
+    	return "";
+    }
+    
+   public String fix5() {
+	   return "";
+   }
+}

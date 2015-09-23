@@ -1,0 +1,12 @@
+package adapter;
+
+import java.io.IOException;
+
+import exceptions.BlankFile;
+
+public interface CreateAuto {
+	
+	public void buildAuto(String filename)throws IOException,BlankFile;
+	
+	public void printAuto(String modelName);
+}

@@ -1,0 +1,10 @@
+package chapter4;
+
+/**
+ * This java class file defines a base data structure tree node, which is a basis for implementing a tree. 
+ * @author qiuyi
+ *
+ */
+public class TreeNode {
+
+}

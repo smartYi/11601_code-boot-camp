@@ -1,0 +1,90 @@
+package adapter;
+import java.io.IOException;
+
+
+import model.*;
+import util.*;
+import exceptions.*;
+
+public abstract class ProxyAutomobile {
+	private Automotbile myobj;
+	
+	/**
+	 * This method is to handle the exception that no input file is included.
+	 * @throws IOException
+	 * @throws BlankFile
+	 * @throws InvalidFileType
+	 * @throws OptionSetNotFound
+	 */
+	public void buildAuto() throws IOException,BlankFile,
+                                   InvalidFileType,
+                                   OptionSetNotFound,
+	                               PriceNotFound{
+		FileMissingException error = new FileMissingException();
+		error.print();
+		String fileName = error.fix(error.getErrno());
+		try{
+			buildAuto(fileName);
+		}catch(AutoException er) {
+			er.print();
+    		String newFileName = er.fix(er.getErrno());
+    		buildAuto(newFileName);
+		}catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * This method is to build a automobile from filename.
+	 * Since in util package, a readFile method is created and can build an automobile,
+	 * so in this method we can just call the function readFile() in the util package.
+	 * @param filename
+	 * @throws IOException
+	 * @throws BlankFile
+	 * @throws InvalidFileType
+	 * @throws OptionSetNotFound
+	 */
+    public void buildAuto(String filename) throws IOException,BlankFile,
+                                                  InvalidFileType,
+                                                  OptionSetNotFound,
+                                                  PriceNotFound{
+    	
+    	Util util = new Util();
+    	
+    	try{
+    		myobj = util.readFile(filename);
+    	}catch(AutoException error) {
+    		
+    		error.print();
+    		String newFileName = error.fix(error.getErrno());
+    		buildAuto(newFileName);
+    		
+    	}catch(IOException e) {
+    		e.printStackTrace();
+    	}
+    	
+    }
+	
+	public void printAuto(String modelName) {
+		
+		myobj.printBasicInfo();
+		myobj.printAdditionalInfo();
+		
+	}
+	
+	public void updateOptionSetName(String modelName, 
+                                    String optionSetName,
+                                    String newName) {
+		myobj.updateOptionSetName(optionSetName, newName);
+		
+	}
+
+    public void updateOptionPrice(String modelName,
+                                  String optionSetName,
+                                  String optionName,
+                                  float newPrice) {
+    	myobj.updateOptionPrice(optionSetName, optionName, newPrice);
+    	
+    }
+	
+}

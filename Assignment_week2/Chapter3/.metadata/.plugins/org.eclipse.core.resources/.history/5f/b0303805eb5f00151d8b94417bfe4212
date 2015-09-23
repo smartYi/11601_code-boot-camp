@@ -1,0 +1,15 @@
+package chapter4;
+
+/**
+ * This java class file defines a base data structure tree node, which is a basis for implementing a tree.
+ * A regular tree node often includes its value and the pointer to its children.
+ * A regular tree often has more than two children.
+ *  
+ * @author qiuyi
+ * @since sep/19/2015
+ * 
+ */
+public class TreeNode {
+	private String name;
+	private TreeNode[] children; 
+}

@@ -1,0 +1,8 @@
+package chapter4;
+
+public class Solution07 {
+	public class Project {
+		public enum State {COMPLETE, PARTIAL, BLANK};
+		private State state = State.BLANK;
+	}
+}

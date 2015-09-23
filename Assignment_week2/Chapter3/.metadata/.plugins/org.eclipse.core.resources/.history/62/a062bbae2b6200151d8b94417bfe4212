@@ -1,0 +1,10 @@
+package chapter4;
+
+import java.nio.file.attribute.AclEntry.Builder;
+
+public class Solution07 {
+	Project[] findBuildOrder(String[] projects, String[][] dependencies) {
+		Graph graph = buildGraph(projects, dependencies);
+		return orderProjects(graph.getNodes);
+	}
+}

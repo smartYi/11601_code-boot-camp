@@ -1,0 +1,9 @@
+package exceptions;
+
+public class BlankFile extends AutoException{
+
+	static final long serialVersionUID = 1;
+	
+	private static final String ERRNO = "1";
+	private static final String MSG = "The file is blank";
+}

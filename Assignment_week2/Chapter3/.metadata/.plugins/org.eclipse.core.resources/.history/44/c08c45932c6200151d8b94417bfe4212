@@ -1,0 +1,37 @@
+package chapter4;
+
+import java.nio.file.attribute.AclEntry.Builder;
+import java.util.ArrayList;
+
+public class Solution07 {
+	Project[] findBuildOrder(String[] projects, String[][] dependencies) {
+		Graph graph = buildGraph(projects, dependencies);
+		return orderProjects(graph.getNodes);
+	}
+	
+	Graph buildGraph(String[] projects, String[][] dependencies) {
+		Graph graph = new Graph();
+		for(String project : projects) {
+			graph.createNode(project);
+		}
+		
+		for(String dependency : dependencies) {
+			String first = dependency[0];
+			String second = dependency[1];
+			graph.addEdge(first,second);
+		}
+		
+		return graph;
+	}
+	
+	
+	Project[] orderProjects(ArrayList<Project> projects) {
+		Project[] order = new Project[projects.size()];
+		
+		int endOfList = addNonDependent(order, projects, 0);
+		int toBeProcessed = 0;
+		while() {
+			
+		}
+	}
+}

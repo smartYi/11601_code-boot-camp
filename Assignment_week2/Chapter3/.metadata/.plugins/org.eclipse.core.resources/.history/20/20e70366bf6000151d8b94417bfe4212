@@ -1,0 +1,22 @@
+package exceptions;
+
+public class OptionSetNotFound extends AutoException{
+    static final long serialVersionUID = 1;
+	
+	private static final int ERRNO = 4;
+	private static final String MSG = "The option set is not found !";
+	
+	public OptionSetNotFound() {
+		super(ERRNO, MSG);
+	}
+	
+	public void print() {
+		System.out.println("The error code is: " + ERRNO);
+		System.out.println("Error is: " + MSG);
+	}
+	
+	public String fix(int errno) {
+		return super.fix(errno);
+		
+	}
+}

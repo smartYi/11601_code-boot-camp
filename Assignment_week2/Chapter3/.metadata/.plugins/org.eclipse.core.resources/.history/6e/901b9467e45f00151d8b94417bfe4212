@@ -1,0 +1,15 @@
+package chapter4;
+
+
+public class Solution02 {
+	
+	public BSTreeNode createMinimal(int[] array) {
+		
+		int size = array.length;
+		
+		int[] left = new int[size/2];
+		BSTreeNode left = createMinimal(array);
+		BSTreeNode right = createMinimal(array);
+		
+	}
+}

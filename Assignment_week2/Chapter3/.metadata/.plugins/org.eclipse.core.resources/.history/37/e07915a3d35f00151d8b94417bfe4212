@@ -1,0 +1,14 @@
+package chapter4;
+
+/**
+ * This java class file defines a base data structure BST tree node, which is a basis for implementing a bst
+ * A regular tree node often includes its value and the pointer to its children.
+ * A regular tree often has more than two children.
+ *  
+ * @author qiuyi
+ * @since sep/19/2015
+ * 
+ */
+public class BSTreeNode {
+
+}
