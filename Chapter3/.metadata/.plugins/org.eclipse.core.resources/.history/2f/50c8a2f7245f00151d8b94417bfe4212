@@ -1,0 +1,65 @@
+package chapter3;
+import java.util.*;
+
+/**
+ * This java file implements three stacks using only one array.
+ * Each stack has the same size and the stack can not extends its length.
+ * A regular stack usually includes four operations:
+ * pop(), peek(), push() and isEmpty().
+ * 
+ * @author qiuyi
+ * @since sep/19/2015
+ * @version 1.0
+ */
+public class Solution01 {
+	
+	private int stackSize;
+	private int numberOfStack;
+	private int[] values;
+	private int[] sizes;
+	
+	//Default constructor
+	public Solution01() {};
+	
+	//Constructor with arguments
+	public Solution01(int stackSize, int numberOfStack) {
+		this.values = new int[stackSize * numberOfStack];
+		this.sizes = new int[numberOfStack];
+	}
+	
+	/**
+	 * This method is to push an item to the top of one stack, which is indexed with the stack order.
+	 * @param index true
+	 */
+	public void push(int index, int data) throws FullStackException{
+		//Check whether the stack is full or not
+		if(sizes[index] == stackSize) throw new FullStackException();
+		
+		sizes[index]++;
+		values[topOfIndex(index)] = data;
+	}
+	
+	/**
+	 * This method is to remove an item from the top of a stack with its stack index.
+	 * @param index true
+	 */
+	public int pop(int index) {
+		//Check whether the stack is empty or not
+		if(sizes[index] == 0) throw new EmptyStackException();
+		
+		int data = values[topOfIndex(index)];
+		values[topOfIndex(index)] = 0;
+		sizes[index]--;
+		return data;
+	}
+	/**
+	 * This method is to return the exact location of top for each stack.
+	 * @param index true
+	 * @return
+	 */
+	public int topOfIndex(int index) {
+		int base = index * stackSize;
+		int offset = sizes[index];
+		return base + offset -1;
+	}
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class name="driver.Test" x="397" y="537">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="true"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="true"
+            accessors-accepted="true" constructors-accepted="true"/>
+        <Communication destinationClassName="util.Util"/>
+        <Communication destinationClassName="model.Automotive"/>
+    </Class>
+    <Class name="model.Automotive" x="27" y="49">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="true"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="true"
+            accessors-accepted="true" constructors-accepted="true"/>
+        <Association destinationClassName="model.Optionset"
+            endpointName="opset[]" kind="Simple"/>
+        <Communication destinationClassName="model.Optionset"/>
+    </Class>
+    <Note x="84" y="612">Test drive Util and model package</Note>
+    <Note x="327" y="616">Util read file into model package</Note>
+    <Note x="185" y="673">The relationship within model package is association</Note>
+</ClassDiagram>

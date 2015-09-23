@@ -1,0 +1,10 @@
+package exceptions;
+
+public class AutoException extends Exception{
+	
+	private int errno;
+	
+	static final long serialVersionUID = 1;
+	
+	
+}

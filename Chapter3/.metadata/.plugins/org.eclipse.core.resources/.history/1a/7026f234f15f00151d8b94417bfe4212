@@ -1,0 +1,8 @@
+package chapter4;
+
+public class Solution04 {
+	
+	public boolean isBalanced() {
+		
+	}
+}

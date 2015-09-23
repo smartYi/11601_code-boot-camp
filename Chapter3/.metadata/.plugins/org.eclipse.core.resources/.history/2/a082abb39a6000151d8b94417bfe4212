@@ -1,0 +1,7 @@
+package exceptions;
+
+public class Fix1to100 {
+	public void fix1(int errno) {
+		
+	}
+}

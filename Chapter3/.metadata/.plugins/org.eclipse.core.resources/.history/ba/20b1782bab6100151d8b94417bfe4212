@@ -1,0 +1,9 @@
+package chapter4;
+
+public class Solution10 {
+	public boolean containsTree(BSTreeNode t1, BSTreeNode t2) {
+		if(t2 == null) {
+			return true;
+		}
+	}
+}

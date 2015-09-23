@@ -1,0 +1,16 @@
+package exceptions;
+
+public class AutoException {
+	public void fix(int errno) {
+		Fix1to100 f1 = new Fix1to100();
+		
+		switch (errno) {
+		case value:
+			
+			break;
+
+		default:
+			break;
+		}
+	}
+}

@@ -1,0 +1,14 @@
+package chapter4;
+
+public class Solution08 {
+	public BSTreeNode findCommonAncestor(BSTreeNode root, BSTreeNode p, BSTreeNode q) {
+		if(!covers(root,p) || !covers(root,q)) {
+			
+		}
+		
+	}
+	
+	public boolean covers(BSTreeNode root, BSTreeNode p) {
+		
+	}
+}

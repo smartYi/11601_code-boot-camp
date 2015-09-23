@@ -1,0 +1,62 @@
+package adapter;
+import java.io.IOException;
+
+
+import model.*;
+import util.*;
+import exceptions.*;
+
+public abstract class ProxyAutomobile {
+	private Automotbile myobj;
+	
+	public void buildAuto() {
+		FileMissingException error = new FileMissingException();
+		error.fix(error.getErrno());
+	}
+	/**
+	 * This method is to build a automobile from filename.
+	 * Since in util package, a readFile method is created and can build an automobile,
+	 * so in this method we can just call the function readFile() in the util package.
+	 * @param filename true
+	 */
+    public void buildAuto(String filename) throws IOException,BlankFile,
+                                                  FileMissingException,InvalidFileType,
+                                                  OptionSetNotFound{
+    	
+    	Util util = new Util();
+    	
+    	try{
+    		myobj = util.readFile(filename);
+    	}catch(AutoException error) {
+    		error.print();
+    		String newFileName = error.fix(error.getErrno());
+    		buildAuto(newFileName);
+    	}catch(IOException e) {
+    		e.printStackTrace();
+    	}
+    	
+    }
+	
+	public void printAuto(String modelName) {
+		
+		myobj.printBasicInfo();
+		myobj.printAdditionalInfo();
+		
+	}
+	
+	public void updateOptionSetName(String modelName, 
+                                    String optionSetName,
+                                    String newName) {
+		myobj.updateOptionSetName(optionSetName, newName);
+		
+	}
+
+    public void updateOptionPrice(String modelName,
+                                  String optionSetName,
+                                  String optionName,
+                                  float newPrice) {
+    	myobj.updateOptionPrice(optionSetName, optionName, newPrice);
+    	
+    }
+	
+}

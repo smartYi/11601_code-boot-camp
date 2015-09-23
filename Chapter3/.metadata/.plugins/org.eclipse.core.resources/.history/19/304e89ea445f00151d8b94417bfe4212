@@ -1,0 +1,54 @@
+package chapter3;
+
+import java.util.ArrayList;
+
+/**
+ * This java file is to create a generic stack class with argument style T.
+ * Stack is a data structure that supports FILO (First-in-last-out) operation ordering.
+ * A regular Stack data structure usually includes these four operations:
+ * pop(): Return and remove the top item from the stack;
+ * push(item): Push the item to the top of the stack;
+ * peek(): Return the item of the stack but do not remove it;
+ * isEmpty(): Return true if and only if the Stack is empty.
+ * In this well-designed stack, each sub-stack has a limitation capacity and if the sub-stack size
+ * exceeds the limitation, another new sub-stack is created. 
+ * 
+ * @author qiuyi
+ * @since Sep/19/2015
+ * @version 1.0
+ * @param <T>
+ */
+
+public class Solution03 {
+	public static class SetOfStacks<T> {
+		//Each sub-stack limitation capacity
+		private int capacity;
+		
+		//Create a arraylist of MyStacks.
+		
+		ArrayList<Stack<T>> stacks = new ArrayList<>();
+		
+		//Constructor 
+		public SetOfStacks(int capacity) {
+			this.capacity = capacity;
+		}
+		public void push(T data) {
+			Stack<T> lastStack = getLastStack();
+			
+			if(lastStack != null && !lastStack.isFull()) {
+				lastStack.push(data);
+			}else {
+				Stack<T> newStack = new Stack<>(capacity);
+			}
+		}
+		
+		
+		/**
+		 * This method is to get the last stack in the stack arraylist
+		 */
+		public Stack<T> getLastStack() {
+			if(stacks.size() == 0) return null;
+			return stacks.get(stacks.size()-1);
+		} 
+	}
+}

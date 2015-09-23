@@ -1,0 +1,24 @@
+package exceptions;
+
+public class Fix1to100 {
+	
+	public void fix1(int errno) {
+		
+	}
+	
+    public void fix2(int errno) {
+		
+	}
+    
+    public void fix3(int errno) {
+	
+    }
+    
+    public void fix4(int errno) {
+	
+    }
+    
+   public void fix5(int errno) {
+	
+   }
+}

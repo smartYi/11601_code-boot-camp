@@ -1,0 +1,9 @@
+package chapter4;
+
+public class Solution03 {
+	
+	public void listDepths(BSTreeNode root) {
+		
+		if(root == null) return;
+	}
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <CommunicationClass name="model.Optionset" x="160" y="184">
+        <Association destinationClassName="model.Optionset.Option"
+            endpointName="opt[]" kind="Simple"/>
+        <Communication destinationClassName="model.Optionset.Option"/>
+    </CommunicationClass>
+    <CommunicationClass name="model.Optionset.Option" x="76" y="444"/>
+    <CommunicationClass name="model.Automotive" x="441" y="174">
+        <Association destinationClassName="model.Optionset"
+            endpointName="opset[]" kind="Simple"/>
+        <Communication destinationClassName="model.Optionset"/>
+    </CommunicationClass>
+</ClassDiagram>

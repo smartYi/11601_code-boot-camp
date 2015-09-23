@@ -1,0 +1,41 @@
+package chapter4;
+
+
+public class Solution01 {
+	
+	public static boolean isConnected(GraphNode a, GraphNode b) {
+		
+		if(a == null || b == null) return false;
+		return search(a,b);
+	}
+	
+	public static boolean search(GraphNode root, GraphNode target) {
+		if(root == null) return false;
+		int temp = visit(root);
+		root.setFlag(true);
+	    if( temp == visit(target)) {
+	    	return true;
+	    }
+	    
+	    for (GraphNode n : root.getChildren()) {
+			if(n.isFlag() == false) {
+				search(n, target);
+			}
+	    }
+	    return false;
+	}
+	
+	public static int visit(GraphNode node) {
+		return node.getData();
+	}
+	
+	
+	public static void main(String[] args) {
+		GraphNode node1 = new GraphNode();
+		GraphNode node2 = new GraphNode();
+		GraphNode node3 = new GraphNode();
+		GraphNode node4 = new GraphNode();
+		GraphNode node5 = new GraphNode();
+		GraphNode node6 = new GraphNode();
+	}
+}

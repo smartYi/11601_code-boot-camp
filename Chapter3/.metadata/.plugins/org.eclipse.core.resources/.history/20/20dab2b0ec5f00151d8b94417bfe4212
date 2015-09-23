@@ -1,0 +1,31 @@
+package chapter4;
+
+import java.util.LinkedList;
+
+public class Solution03 {
+	
+	public void listDepths(BSTreeNode root) {
+		
+		if(root == null) return;
+		
+		LinkedList<LinkedList<BSTreeNode>> list = new LinkedList<>();
+		LinkedList<BSTreeNode> rootList = new LinkedList<>();
+		rootList.add(root);
+		list.addLast(rootList);
+		
+		while(1){
+		LinkedList<BSTreeNode> temp = new LinkedList<>();
+		while(rootList.size()!=0){
+			BSTreeNode node = rootList.pollFirst();
+			if(node!=null) {
+				if(node.getLeftChild()!=null) {
+					temp.addLast(node.getLeftChild());
+				}
+				if(node.getRightChild()!=null) {
+					temp.addLast(node.getRightChild());
+				}
+			}
+		}
+	}
+	}
+}

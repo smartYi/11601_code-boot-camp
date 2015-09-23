@@ -1,0 +1,11 @@
+package adapter;
+import model.*;
+
+public abstract class ProxyAutomobile {
+	private Automotbile myobj;
+	
+    public void buildAuto(String filename);
+	
+	public void printAuto(String modelName);
+	
+}

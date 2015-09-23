@@ -1,0 +1,15 @@
+package chapter4;
+
+import java.util.LinkedList;
+
+public class Solution03 {
+	
+	public void listDepths(BSTreeNode root) {
+		
+		if(root == null) return;
+		
+		LinkedList<LinkedList<Integer>> list = new LinkedList<>();
+		LinkedList<Integer> rootList = new LinkedList<>();
+		rootList.add(root.getValue())
+	}
+}

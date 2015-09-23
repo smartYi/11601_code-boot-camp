@@ -1,0 +1,12 @@
+package chapter4;
+
+
+public class Solution02 {
+	
+	public BSTreeNode createMinimal(int[] array) {
+		
+		int size = array.length;
+		
+		
+	}
+}

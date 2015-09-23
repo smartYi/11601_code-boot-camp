@@ -1,0 +1,7 @@
+package chapter4;
+
+public class GraphNode {
+	private int data;
+	private GraphNode[] children;
+	private boolean flag = false;
+}

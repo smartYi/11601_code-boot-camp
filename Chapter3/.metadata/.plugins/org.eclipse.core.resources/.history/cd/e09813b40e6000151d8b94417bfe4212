@@ -1,0 +1,5 @@
+package adapter;
+
+public abstract class ProxyAutomobile {
+
+}

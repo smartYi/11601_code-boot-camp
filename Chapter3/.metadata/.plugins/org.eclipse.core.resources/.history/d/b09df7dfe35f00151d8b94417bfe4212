@@ -1,0 +1,9 @@
+package chapter4;
+
+
+public class Solution02 {
+	
+	public void createMinimal(int[] array) {
+		
+	}
+}

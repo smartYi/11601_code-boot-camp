@@ -1,0 +1,59 @@
+package driver;
+
+import java.io.IOException;
+
+import adapter.*;
+import exceptions.*;
+
+/**
+ * This is a test class that drive the model package and util package.
+ * <p>
+ * Several tests are done to test the source code correctness.
+ * First setters and getters function are tested to show good encapsulation of this code;
+ * Then delete functions are tested to show data contents can be deleted arbitrarily 
+ * without changing output format;
+ * Last update functions are tested to show the flexibility of this car configuration model.
+ *
+ * @author--Yi
+ * @version--1.0
+ * @since--Sep/14/2015
+ */
+public class Driver {
+	
+	
+	/**
+	 * This is the main function and do several tests.
+	 * @param args true
+	 */
+	public static void main(String[] args) throws IOException,BlankFile,
+	                                              FileMissingException,InvalidFileType,
+	                                              OptionNotFound,
+	                                              PriceNotFound{
+		
+		//Build AutoMobile Object from a file
+//		BuildAuto auto = new BuildAuto();
+//		
+//		System.out.println("Test begin!");
+//		System.out.println("-----------------------------------------------------------");
+//		System.out.println("1: Test FileMissingException, InvalidFileType and BlankFile.");
+//		System.out.println("---------------------------------------");
+//		auto.buildAuto();
+//		System.out.println("Below is information: ");;
+//		auto.printAuto("");
+//		System.out.println("-----------------------------------------------------------");
+//		
+		BuildAuto auto2 = new BuildAuto();
+		auto2.buildAuto("./FordZTW.txt");
+		auto2.printAuto("Focus Wagon ZTW");
+		System.out.println("Test update option set name!");;
+		auto2.updateOptionSetName("Focus Wagon ZTW", "Brakers", "Control Device");
+		auto2.printAuto("");
+		System.out.println("-----------------------------------------------------------");
+		System.out.println("Test update option price!");;
+		auto2.updateOptionPrice("Focus Wagon ZTW", "Power Moonroof", "present", 790);
+		auto2.printAuto("");
+		auto2.serial();
+		auto2.deserial();
+		
+	}
+}
