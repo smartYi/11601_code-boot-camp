@@ -1,0 +1,47 @@
+package solution3;
+
+import java.nio.charset.MalformedInputException;
+
+/**
+ * This method is to find an element in a rotated sorted array.
+ * And the array is originally sorted in increasing order.
+ * Trick: No matter how many times the array is rotated, the array is 
+ * divided into two increasing parts, except that the array is rotated back to its
+ * original form, where there is only one increasing part that is the whole array.
+ * Idea: The main idea is very likely the binary searching. 
+ * @author qiuyi
+ *
+ */
+public class Solution03 {
+	public static int searchInRotatedArray(int[] array, int low, int high, int item) {
+		
+		//We first check which increasing part the item belongs to.
+		int mid = (low + high) / 2;
+		if(array[low] < array[mid]) {
+			if(item == array[low]) return low;
+			else if(item > array[low]) {
+				return searchInRotatedArray(array, low, mid, item);
+			}else {
+				return searchInRotatedArray(array, mid+1, high, item);
+			}
+		}else if(array[low] > array[mid]) {
+			if(item == array[high]) return high;
+			else if(item <= array[high]) {
+				return searchInRotatedArray(array, mid+1, high, item);
+			}else {
+				return searchInRotatedArray(array, low, mid-1, item);
+			}
+		}else {
+			if(item == array[low]) return low;
+			else {
+				return searchInRotatedArray(array, mid+1, high, item);
+			}
+		}	
+	}
+	
+	public static void main(String[] args) {
+		
+		int[] array = new int[]{15,16,19,20,25,1,3,4,5,7,10,14};
+		System.out.println(searchInRotatedArray(array, 0, array.length-1, 14));
+	}
+}

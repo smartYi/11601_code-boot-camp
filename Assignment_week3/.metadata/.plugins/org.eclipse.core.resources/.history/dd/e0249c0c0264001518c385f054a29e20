@@ -1,0 +1,22 @@
+package solution;
+
+public class Solution04 {
+	
+	public static int findIndex(Listy list, int item) {
+		int length = 0;
+		while(list.elementAt(length) != -1) length++;
+		return binarySearch(list, low, high-1, item);
+	}
+	
+	public static int binarySearch(Listy list, int length, int item) {
+		int mid = 
+		return 0;
+		
+	}
+	public static void main(String[] args) {
+		int[] array = new int[]{1,2,3,4,5,6};
+		Listy listy = new Listy(array);
+		System.out.println(findIndex(listy, 1));
+	}
+	
+}

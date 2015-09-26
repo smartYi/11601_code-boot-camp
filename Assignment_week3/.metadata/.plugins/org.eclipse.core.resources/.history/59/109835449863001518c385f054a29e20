@@ -1,0 +1,23 @@
+package solution02;
+
+import java.util.Arrays;
+
+public class Solution02 {
+	public boolean isAnagrams(String str1, String str2) {
+		
+		char[] array1 = str1.toCharArray();
+		char[] array2 = str2.toCharArray();
+		
+		Arrays.sort(array1);
+		Arrays.sort(array2);
+		
+		str1 = new String(array1);
+		str2 = new String(array2);
+		
+		return str1.equals(str2);
+	}
+	
+	public void groupAnagrams(String[] array) {
+		
+	}
+}

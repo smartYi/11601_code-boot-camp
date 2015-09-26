@@ -1,0 +1,11 @@
+package solution;
+
+/**
+ * This class file is to sort a big file with limited memory.
+ * Merge sorting is used here.
+ * @author qiuyi
+ *
+ */
+public class Solution06 {
+	
+}

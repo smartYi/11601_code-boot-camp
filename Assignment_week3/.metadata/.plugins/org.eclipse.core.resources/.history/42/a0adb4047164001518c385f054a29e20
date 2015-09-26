@@ -1,0 +1,9 @@
+package solution;
+
+import java.io.FileNotFoundException;
+
+public class Solution07 {
+	public void findOpenNumber() throws FileNotFoundException {
+		
+	}
+}

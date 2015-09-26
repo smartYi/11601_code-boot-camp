@@ -1,0 +1,54 @@
+package solution02;
+
+import java.util.*;
+
+
+/**
+ * This class file is to buid a hashmap which allows us to map from an element an item 
+ * of type T to an ArrayList of type E.
+ * This is a common sloution to key conflicts
+ * This is the generic format.
+ * @author qiuyi
+ *
+ */
+public class HashMapList<T, E> {
+	private HashMap<T, ArrayList<E>> map = new HashMap<T, ArrayList<E>>();
+	
+	/**
+	 * This method is to add an item to this hash map list
+	 * @param key
+	 * @param item
+	 */
+	public void put(T key, E item) {
+		if(!map.containsKey(key)) {
+			map.put(key, new ArrayList<E>());
+		}
+		map.get(key).add(item);
+	}
+	
+	public void put(T key, ArrayList<E> items) {
+		map.put(key, items);
+	}
+	
+	public ArrayList<E> get(T key) {
+		return map.get(key);
+	}
+	
+	public boolean containsKey(T key) {
+		return map.containsKey(key);
+	}
+	
+	public boolean containsValue(T key, E value) {
+		ArrayList<E> list = map.get(key);
+		if(list == null) return false;
+		return list.contains(value);
+	}
+	
+	public Set<T> keySet() {
+		return map.keySet();
+	}
+	
+	public String toString() {
+		return map.toString();
+	}
+}

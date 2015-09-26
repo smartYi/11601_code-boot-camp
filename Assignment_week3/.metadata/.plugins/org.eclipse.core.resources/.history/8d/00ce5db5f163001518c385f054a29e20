@@ -1,0 +1,18 @@
+package solution02;
+
+import java.util.*;
+
+/**
+ * This class file is to buid a hashmap which allows us to map from an element an item 
+ * of type T to an ArrayList of type E.
+ * This is the generic format.
+ * @author qiuyi
+ *
+ */
+public class HashMapList<T, E> {
+	private HashMap<T, ArrayList<E>> map = new HashMap();
+	
+	public void put() {
+		
+	}
+}

@@ -1,0 +1,10 @@
+package solution;
+
+/**
+ * This class file is to sort an array into an alternating sequence of peaks and valleys.
+ * @author qiuyi
+ *
+ */
+public class Solution11 {
+	
+}

@@ -1,0 +1,9 @@
+package solution;
+
+import javax.swing.text.StyledEditorKit.ForegroundAction;
+
+public class Solution08 {
+	public void findDuplicates(int[] array) {
+		BitSet bitSet = new BitSet(32000);
+	}
+}

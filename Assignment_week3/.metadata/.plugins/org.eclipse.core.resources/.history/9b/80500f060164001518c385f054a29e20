@@ -1,0 +1,9 @@
+package solution;
+
+public class Solution04 {
+	
+	public static void main() {
+		
+	}
+	Listy listy = new Listy(array)
+}

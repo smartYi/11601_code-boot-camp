@@ -1,0 +1,7 @@
+package solution02;
+
+public class Solution02 {
+	public boolean isAnagrams(String str1, String str2) {
+		
+	}
+}

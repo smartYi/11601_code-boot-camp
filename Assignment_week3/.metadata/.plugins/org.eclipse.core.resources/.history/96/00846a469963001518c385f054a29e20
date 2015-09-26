@@ -1,0 +1,11 @@
+package solution02;
+
+/**
+ * This class file is to buid a hashmap which allows us to map from an element an item 
+ * of type T to an ArrayList of type E.
+ * @author qiuyi
+ *
+ */
+public class HashMapList {
+
+}

@@ -1,0 +1,27 @@
+package solution3;
+
+
+/**
+ * This method is to find an element in a rotated sorted array.
+ * And the array is originally sorted in increasing order.
+ * Trick: No matter how many times the array is rotated, the array is 
+ * divided into two increasing parts, except that the array is rotated back to its
+ * original form, where there is only one increasing part that is the whole array.
+ * Idea: The main idea is very likely the binary searching. 
+ * @author qiuyi
+ *
+ */
+public class Solution03 {
+	public int searchInRotatedArray(int[] array, int low, int high, int item) {
+		
+		//We first check which increasing part the item belongs to.
+		int mid = (low + high) / 2;
+		if(array[low] < array[high]) {
+			if(item == array[low]) return low;
+			else if(item > array[low]) {
+				
+			}
+		}
+		
+	}
+}

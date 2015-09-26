@@ -1,0 +1,21 @@
+package solotion01;
+
+public class Soloution01 {
+	public void sortedMerge(int[] des, int[] src, int length) {
+		int newLength = length - 1;
+		int size = des.length -1;
+		int index = src.length - 1;
+		while(index>=0) {
+			if(src[index] > des[newLength]) {
+				des[size] = src[index];
+				index--;
+				size--;
+			}else {
+				des[size] = des[newLength];	
+				newLength--;
+				size--;
+			}
+		}
+	}
+	reutrn;
+}

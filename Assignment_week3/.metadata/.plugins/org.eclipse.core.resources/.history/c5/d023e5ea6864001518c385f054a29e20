@@ -1,0 +1,42 @@
+package solution;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+
+/**
+ * This class file is to design an algorithm to get the rank of a given number 
+ * in an array.
+ * @author qiuyi
+ *
+ */
+public class Solution10 {
+	private static LinkedList<Integer> linkedList = new LinkedList<Integer>();
+	
+	public static void track(int x) {
+		if(linkedList.isEmpty()) {
+			linkedList.add(x);
+			return;
+		}else {
+			linkedList.addLast(x);
+			int size = linkedList.size()-1;
+		    for(int index = size; index>0;index--) {
+				if(linkedList.get(index) < linkedList.get(index-1)) {
+					int exc = linkedList.get(index);
+					linkedList.set(index, linkedList.get(index-1));
+					linkedList.set(index-1, exc);
+				}
+			}
+		}	
+	}
+	
+	public int getRankOfNumber(int x) {
+		return binarySearch(linkedList,x,0,linkedList.size()-1);
+	}
+	
+	public int binarySearch(LinkedList<Integer> list, int element, int low, int high) {
+		if(low > high) return -1;
+		
+		int mid = (low + high) / 2;
+		return 0;
+	}
+}

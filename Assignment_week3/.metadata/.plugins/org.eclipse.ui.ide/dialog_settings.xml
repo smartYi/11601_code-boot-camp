@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/Users/qiuyi/Desktop/unit2/yiq_project1_unit2_partB"/>
+			<item value="/Users/qiuyi/Desktop/unit2/yiq_project1_unit2_partA"/>
+			<item value="/Users/qiuyi/Desktop/18641/project/project1/unit2/yiq_project1_unit2_partB"/>
+			<item value="/Users/qiuyi/Desktop/18641/project/project1/unit2/yiq_project1_unit2_partA"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+</section>

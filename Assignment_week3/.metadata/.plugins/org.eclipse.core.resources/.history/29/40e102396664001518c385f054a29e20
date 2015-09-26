@@ -1,0 +1,17 @@
+package solution;
+
+import java.util.ArrayList;
+
+/**
+ * This class file is to design an algorithm to get the rank of a given number 
+ * in an array.
+ * @author qiuyi
+ *
+ */
+public class Solution10 {
+	private static ArrayList<Integer> arrayList = new ArrayList<Integer>();
+	
+	public static void track(int x) {
+		if(arrayList.isEmpty()) arrayList.add(x)
+	}
+}

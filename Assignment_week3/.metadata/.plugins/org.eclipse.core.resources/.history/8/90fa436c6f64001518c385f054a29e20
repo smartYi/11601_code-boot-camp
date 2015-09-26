@@ -1,0 +1,48 @@
+package solution;
+
+/**
+ * This class file is to sort an array into an alternating sequence of peaks and valleys.
+ * The main idea is firstly sort this array and then create a new array by swap two
+ * adjacent elements.
+ * Quick sort is used here.
+ * @author qiuyi
+ *
+ */
+public class Solution11 {
+	public static void quickSort(int[] array, int low, int high) {
+		if(array.length == 1) return;
+		int index = partition(array, low, high);
+		if(index-1 > low) {
+			quickSort(array, low, index-1);
+		}
+		if(index < high) {
+			quickSort(array, index, high);
+		}
+	}
+	
+	public static int partition(int[] array, int low, int high) {
+		int pivot = array[(low + high) / 2];
+		while(low < high) {
+			while(array[high] > pivot) high--;
+			if(low < high) {
+			array[low] = array[high];
+			low++;
+			}
+			while(array[low] < pivot) low++;
+			if(low < high) {
+			array[high] = array[low];
+			high--;
+			}
+		}
+		array[low] = pivot;
+		return low;
+	}
+	
+	public static void main(String[] args) {
+		int[] array = new int[]{2,3,1,5,9,0,6,8};
+		quickSort(array, 0, array.length-1);
+		for(int i : array) {
+			System.out.println(array[i]);
+		}
+	}
+}

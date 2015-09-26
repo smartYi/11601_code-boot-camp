@@ -1,0 +1,18 @@
+package solution;
+
+import java.util.LinkedList;
+
+/**
+ * This class file is to design an algorithm to get the rank of a given number 
+ * in an array.
+ * @author qiuyi
+ *
+ */
+public class Solution10 {
+	private static LinkedList<Integer> linkedList = new LinkedList<Integer>();
+	
+	public static void track(int x) {
+		linkedList.add(x);
+		
+	}
+}

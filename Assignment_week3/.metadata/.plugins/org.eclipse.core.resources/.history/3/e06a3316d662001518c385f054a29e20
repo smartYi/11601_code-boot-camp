@@ -1,0 +1,6 @@
+package solotion01;
+
+public class Soloution01 {
+	public void sortedMerge(int[] des, int[] src, int length) {
+	}
+}

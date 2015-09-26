@@ -1,0 +1,7 @@
+package solution;
+
+import javax.swing.text.StyledEditorKit.ForegroundAction;
+
+public class Solution08 {
+	BitSet bitSet = new BitSet(32000);
+}

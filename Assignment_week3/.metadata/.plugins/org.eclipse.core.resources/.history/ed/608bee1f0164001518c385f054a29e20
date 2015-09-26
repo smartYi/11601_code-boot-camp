@@ -1,0 +1,9 @@
+package solution;
+
+public class Solution04 {
+	
+	public static void main(String[] args) {
+		int[] array = int[]{};
+		Listy listy = new Listy(array)
+	}
+}

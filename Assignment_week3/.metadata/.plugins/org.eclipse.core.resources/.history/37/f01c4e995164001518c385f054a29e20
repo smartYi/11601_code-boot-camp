@@ -1,0 +1,25 @@
+package solution;
+
+/**
+ * This class file is to sort a big file with limited memory.
+ * Merge sorting is used here.
+ * The main idea is to firstly sort a limited memory of strings and 
+ * then merge them together.
+ * For different problems, different memory is used, so here I just write down 
+ * the merge sort code.
+ * @author qiuyi
+ *
+ */
+public class Solution06 {
+	public void mergeSort(int[] array, int low, int high) {
+		if(low > high) return;
+		int mid = (low + high) / 2;
+		mergeSort(array, low, mid);
+		mergeSort(array, mid+1, high);
+		merge(array,low,high);
+	}
+	
+	public void merge(int[] array, int low, int high) {
+		
+	}
+}

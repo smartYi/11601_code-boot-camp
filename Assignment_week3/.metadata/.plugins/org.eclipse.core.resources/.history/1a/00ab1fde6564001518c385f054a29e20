@@ -1,0 +1,11 @@
+package solution;
+
+/**
+ * This class file is to design an algorithm to get the rank of a given number 
+ * in an array.
+ * @author qiuyi
+ *
+ */
+public class Solution10 {
+	
+}

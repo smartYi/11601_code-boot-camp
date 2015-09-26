@@ -1,0 +1,9 @@
+package solution;
+
+public class Listy {
+	private int[] array;
+	
+	public Listy(int[] array) {
+		this.array = array;
+	}
+}

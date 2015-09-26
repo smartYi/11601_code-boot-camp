@@ -1,0 +1,35 @@
+package solution;
+
+/**
+ * This class file is to sort an array into an alternating sequence of peaks and valleys.
+ * The main idea is firstly sort this array and then create a new array by swap two
+ * adjacent elements.
+ * Quick sort is used here.
+ * @author qiuyi
+ *
+ */
+public class Solution11 {
+	public void quickSort(int[] array, int low, int high) {
+		if(array.length == 1) return;
+		int index = partition(array, low, high);
+		if(index-1 > 0) {
+			quickSort(array, low, index-1);
+		}
+		if(index < high) {
+			quickSort(array, index, high);
+		}
+	}
+	
+	public int partition(int[] array, int low, int high) {
+		int pivot = array[low];
+		while(low < high) {
+			while(array[high] > pivot) high--;
+			array[low] = array[high];
+			low++;
+			while(array[low] < pivot) low++;
+			array[high] = array[low];
+			high--;
+		}
+		return 0;
+	}
+}

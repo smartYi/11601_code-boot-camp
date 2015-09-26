@@ -1,0 +1,12 @@
+package solution;
+
+/**
+ * This class file is to sort an array into an alternating sequence of peaks and valleys.
+ * The main idea is firstly sort this array and then create a new array by swap two
+ * adjacent elements.
+ * @author qiuyi
+ *
+ */
+public class Solution11 {
+	
+}

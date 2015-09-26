@@ -1,0 +1,9 @@
+package solution;
+
+public class BitSet {
+	private int[] bitset;
+	
+	public BitSet(int size) {
+		bitset = new int[]
+	}
+}

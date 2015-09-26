@@ -1,0 +1,19 @@
+package solution;
+
+public class Solution05 {
+	public static int searchString(String[] strings, String str, int low, int high) {
+		if(low > high) return -1;
+		
+		int mid = (low + high) / 2;
+		
+		if(strings[mid].isEmpty()) {
+			int leftIndex = mid;
+			int rightIndex = mid;
+			while(strings[leftIndex].isEmpty() && strings[rightIndex].isEmpty()) {
+				leftIndex--;
+				rightIndex++;
+				if(strings[leftIndex].isEmpty())
+			}
+		}
+	} 
+}
