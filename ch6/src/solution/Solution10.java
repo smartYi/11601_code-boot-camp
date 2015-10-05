@@ -12,14 +12,14 @@ package solution;
  * of 0000000110 also means that we select #6 bottle to do test in test stripe #2 and #3.
  * Finally we can conclude that:
  * For bottle #1, we only use it to do test in stripe #1, the binary representation is 0000000001;
- * For bottle #2, we only use it to do test in stripe #1, the binary representation is 0000000010;
+ * For bottle #2, we only use it to do test in stripe #2, the binary representation is 0000000010;
  * For bottle #3, we use it to do tests in stripe #1 and #2, the binary representation is 0000000011;
  * .....
  * For bottle #1000, we use it to do test in stripe #1.., the binary representation is 1111101000;
  * Since there is only one bottle contains poison, we can deduce the poisonous bottle with 
  * the positive status.
  * If only the third stripe shows positive, it means the binary representation is 0000000100,
- * so the poisonous bottle is #3.
+ * so the poisonous bottle is #4.
  * If all 1, 4, 7, 9 stripes shows positive, it means the binary representation is 0101001001,
  * so the poisonous bottle is 1+8+64+256=329.
  * </p>
